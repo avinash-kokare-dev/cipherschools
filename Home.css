@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header::before {
+    background: url('https://images.unsplash.com/photo-1562813733-b31f71025d54?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80') no-repeat center;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 130px;
+}
+
+.navbar-image {
+    flex: 0.3;
+}
+
+.navbar-image>img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    margin-left: 100px;
+}
+
+.navbar-container {
+    flex: 0.6;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.navbar-container>li {
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome, .cipher {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.welcome {
+    font-size: 40px;
+    position: absolute;
+    top: 300px;
+}
+
+.cipher {
+    font-size: 35px;
+    position: absolute;
+    top: 358px;
+}
+
+.cipher>i {
+    animation-name: cipher;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cipher {
+    from {
+        color: red;
+    }
+    to {
+        color: yellow;
+    }
+}
+
+.about {
+    margin: 0 20px 20px 20px;
+    margin-top: 680px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item {
+    border: 1px solid red;
+    min-height: 200px;
+    min-width: 200px;
+    text-align: center;
+    background-color: aqua;
+}
+
+.item>hr {
+    display: none;
+    width: 0px;
+}
+
+.item h1 {
+    padding: 100px;
+}
+
+.item:hover>hr {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    animation-name: avi;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes avi {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    background-color: blueviolet;
+    text-align: center;
+}
+
+.footer > h1{
+    height: 60px;
+    margin-bottom: 10px;
+}
