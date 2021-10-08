@@ -10,6 +10,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
 header::before {
@@ -60,8 +61,10 @@ header::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
 }
-
 .welcome, .cipher {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
@@ -70,14 +73,10 @@ header::before {
 
 .welcome {
     font-size: 40px;
-    position: absolute;
-    top: 300px;
 }
 
 .cipher {
     font-size: 35px;
-    position: absolute;
-    top: 358px;
 }
 
 .cipher>i {
@@ -96,17 +95,18 @@ header::before {
 }
 
 .about {
-    margin: 0 20px 20px 20px;
-    margin-top: 680px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-grow: 1;
+    flex-wrap: wrap;
 }
 
 .item {
     border: 1px solid red;
-    min-height: 200px;
-    min-width: 200px;
+    height: 20vw;
+    width: 20vw;
+    overflow: auto;
     text-align: center;
     background-color: aqua;
 }
@@ -116,9 +116,9 @@ header::before {
     width: 0px;
 }
 
-.item h1 {
+/* .item h1 {
     padding: 100px;
-}
+} */
 
 .item:hover>hr {
     display: block;
